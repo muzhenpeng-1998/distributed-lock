@@ -8,10 +8,10 @@ spring:
     name: service-order
   redis:
     database: 0
-    host: 127.0.0.1
+    host: 139.198.9.23
     port: 6379
     timeout: 2000
-    password:
+    password: zhiwei123
     #数据库连接配置
   datasource:
     #配置当前使用的数据源的操作类型
@@ -19,11 +19,11 @@ spring:
     #配置MySQL的驱动程序类
     driver-class-name: com.mysql.cj.jdbc.Driver
     #数据库连接地址
-    url: jdbc:mysql://localhost:3306/distributed-lock?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://139.198.9.23:3306/distributed-lock?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     #数据库连接用户名
     username: root
     #数据库连接密码
-    password: root
+    password: 123456
     #进行数据库连接池的配置
     dbcp2:
       #初始化提供的连接数
@@ -39,12 +39,12 @@ spring:
       test-on-borrow: false
       test-on-return: false
 #自定义哨兵
-sentinel:
-  address:
-    - 127.0.0.1:26379
-    - 127.0.0.1:26479
-    - 127.0.0.1:26579
-  masterName: mymaster
+#sentinel:
+#  address:
+#    - 127.0.0.1:26379
+#    - 127.0.0.1:26479
+#    - 127.0.0.1:26579
+#  masterName: mymaster
 
 #注册中心
 eureka:
